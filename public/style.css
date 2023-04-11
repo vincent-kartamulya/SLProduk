@@ -1,0 +1,23 @@
+.card-custom{
+    flex-wrap: wrap;
+    flex: 0 0 33.333333%;
+    background-color: brown;
+}
+
+.silver {
+    background-color: silver;
+    color: black;
+}
+
+.gold {
+    background-color: gold;
+    color: black;
+}
+
+.red{
+    background-color: red !important;
+}
+
+a{
+    color: white;
+}
