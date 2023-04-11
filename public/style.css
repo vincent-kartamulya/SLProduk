@@ -1,27 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 body {
-    background: linear-gradient(rgba(255, 0, 0, 0.758), rgba(255, 255, 0, 0.749), rgba(1, 255, 1, 0.763));
+    background: linear-gradient(#f84c4c, #fafa57, #5dfe5d);
     font-family: 'Varela Round', sans-serif;
 }
 
 a:hover {text-decoration: none;}
+
+.row-custom:hover{
+    transform: scale(1.1);
+}
 .best-custom{
     font-size: 60px;
     color: white;
     font-family: 'lobster';
 }
 .silver {
-    background-color: silver;
+    background-color: #c0c0c0 !important;
     color: black;
 }
 
 .gold {
-    background-color: gold;
+    background-color: #ffd700 !important;
     color: black;
 }
 
 .red{
-    background-color: red !important;
+    background-color: #ff0000 !important;
     color: white;
 }

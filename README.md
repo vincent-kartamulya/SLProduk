@@ -1,66 +1,108 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+![Logo](public/indomiebg.jpg)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# INDOMIE SELERAKU~~~
+This is a website made for Quiz of Web Programming Course on PPTI BCA x Binus University Program. The content consist of the showcase of some best selling Indomie variants. Why Indomie you asked? Who doesn't love Indomie! Not me of course.
 
-## About Laravel
+<br />
+<br />
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 👩‍💻 Information
+|  |  |
+| ------------- | ------------- |
+| Name          | Vincent Kartamulya Santoso  |
+| NIM           | 2502041344  |
+| Class         | PPTI 12  |
+| Lecturer      | Anderies, B.Eng., S.Kom., M.Kom.  |
+| University    | Binus University x PPTI BCA (Hidup Binus! Hidup BCA!)|
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<br />
+<br />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## ⚡️ Content Requirements
+- Product Name
+- Status Product, which consist of R, SR, and SSR. For every status, there is specific color assigned to them, R is silver, SR is gold, and SSR is red.
+- Product Price
+- Product Description
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<br />
+<br />
 
-## Laravel Sponsors
+## 🛠 Function used in this website
+- Laravel
+- CSS Framework: Bootstrap
+- HTML
+- CSS
+- Javascript
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<br />
+<br />
 
-### Premium Partners
+## 1. Main Section
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![App Screenshot](public/main.png)
 
-## Contributing
+This is the main page where there are some of the best selling variants of Indomie. You can see the name, image, price, and status. Each status have their own color where you can see below
+|Status  | Color |
+| ------------- | ------------- |
+| R (Rare) | ![#c0c0c0](https://via.placeholder.com/10/c0c0c0?text=+) Silver  |
+| SR (Super Rare) | ![#ffd700](https://via.placeholder.com/10/ffd700?text=+) Gold  |
+| SSR (Super Super Rare) | ![#ff0000](https://via.placeholder.com/10/ff0000?text=+) Red|
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+There is an animation if you hover the card and if you click a card, it will go to the detail page of the chosen variant.
 
-## Code of Conduct
+![App Screenshot](public/seomain.png)
+And for SEO purposes, the meta description for this page is consist of every description of the variant and the title if consist of name of every variants also.
+The code being extends from master.blade.php as follow.
+```bash
+<meta name="viewport" content= "@yield('description')">
+<title>@yield('title')</title>
+```
+Then in the child extended from master.blade.php there will be looping of keyword for every item as below.
+```bash
+@section('title')
+    Best Seller Indomie Berbagai Varian Rasa
+    @foreach ($produk as $item)
+        {{$item['name']}}
+    @endforeach
+@endsection
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+@section('description')
+    @foreach ($produk as $item)
+        {{$item['desc']}}
+    @endforeach
+@endsection
+```
+<br />
+<br />
 
-## Security Vulnerabilities
+## 2. Detail Section
+![App Screenshot](public/detail.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+In this page, you will find a more detail information about the chosen variant. You can see the image, status, price, name, and detailed description about the variants. On the top left corner, there is a back button if you want to go back to the main page.
 
-## License
+How does the web know which detail of product to show? The answer is id. Every page have an ID which routes to the detail function of ProdukController which shown below
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+Route::get('/produk/{id}', [App\Http\Controllers\ProdukController::class,'detail']);
+```
+
+For SEO purposes, the meta description for this page is only specific for the selected product only and the title consist of name of the specific variant
+![App Screenshot](public/seodetail.png)
+
+Where for the code you can see below
+```bash
+@section('title')
+    {{$item['name']}}
+@endsection
+
+@section('description')
+    {{$item['desc']}}
+@endsection
+```
+
+## Authors
+
+- [@vincent-kartamulya](https://github.com/vincent-kartamulya/)
