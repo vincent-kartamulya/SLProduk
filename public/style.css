@@ -1,9 +1,16 @@
-.card-custom{
-    flex-wrap: wrap;
-    flex: 0 0 33.333333%;
-    background-color: brown;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body {
+    background: linear-gradient(rgba(255, 0, 0, 0.758), rgba(255, 255, 0, 0.749), rgba(1, 255, 1, 0.763));
+    font-family: 'Varela Round', sans-serif;
 }
 
+a:hover {text-decoration: none;}
+.best-custom{
+    font-size: 60px;
+    color: white;
+    font-family: 'lobster';
+}
 .silver {
     background-color: silver;
     color: black;
@@ -16,8 +23,5 @@
 
 .red{
     background-color: red !important;
-}
-
-a{
     color: white;
 }
